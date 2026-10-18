@@ -14,7 +14,7 @@
 
 ## Not completed
 
-- **Device / visual smoke test**: the host Android emulator segfaulted before the app could launch. Reproduced with accelerated and CPU-only modes, different graphics modes and an isolated official stable emulator. No screenshot or device-test pass is claimed. Test on a physical Android device before a production release.
+- **Device / visual smoke test**: the host Android emulator segfaulted before the app could launch. Reproduced with accelerated and CPU-only modes, different graphics modes and an isolated official stable emulator. The GitHub Actions workflow now runs a separate clean Android emulator smoke test and captures screenshots; its run result must be checked before publishing. Local device-test success is not claimed. Test on a physical Android device before a production release.
 - **Complete all-game coverage**: the coverage table documents unmodeled games/strategies and prize tiers. Full all-game optimality is not claimed. No unauthorized OLG account endpoints or embedded website credentials were used.
 
 The downloadable APK is a development build for testing. It has not been submitted to Google Play, F-Droid or a public release service.

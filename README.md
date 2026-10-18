@@ -62,7 +62,7 @@ Install JDK 21, Android SDK Platform 36 and the Android build tools; open this d
 
 The Gradle wrapper downloads Gradle 9.3.1. Set `ANDROID_HOME` or your untracked `local.properties` to your Android SDK location. First build needs access to Google Maven and Maven Central.
 
-Debug APK: `app/build/outputs/apk/debug/app-debug.apk`. It is signed with a development key and is suitable for sideload testing, not a production release. The GitHub Actions workflow builds and uploads a debug APK on pushes, pull requests and manual runs.
+Debug APK: `app/build/outputs/apk/debug/app-debug.apk`. It is signed with a development key and is suitable for sideload testing, not a production release. The GitHub Actions workflow runs local tests, lint and Android emulator smoke tests, then uploads debug and unsigned release APKs on pushes, pull requests and manual runs.
 
 Release preparation:
 

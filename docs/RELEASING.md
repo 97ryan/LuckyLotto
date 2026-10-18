@@ -9,4 +9,4 @@ The included debug APK is for testing. A production release should use an owner-
 5. Build `./gradlew assembleRelease`; sign with Android Studio or `apksigner` using the owner key. Verify with `apksigner verify --verbose` and publish the SHA-256 digest.
 6. Attach corresponding source and GPL license to the same release. Test an upgrade from the prior signed version.
 
-The current workflow builds a debug APK and never publishes a release or sends a signing key anywhere. No Google Play or F-Droid listing has been created.
+The current workflow verifies the app on a clean Android emulator and builds a debug APK plus an unsigned release APK. Release signing happens locally with the owner key; the workflow never receives a signing key or publishes a release. No Google Play or F-Droid listing has been created.
