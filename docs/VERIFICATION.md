@@ -12,6 +12,10 @@
 - Package metadata verified: `org.luckylotto`, label LuckyLotto, version 0.1.0, minimum API 26, target API 36.
 - Public 6/49 and LOTTO MAX endpoints verified with the same request headers used by the Android app; real draw dates, jackpots and MAXPLUS / MAXMILLIONS parsed. Other requested feeds returned HTTP 401 and remain explicit failures.
 
+## Android device checks
+
+- The clean GitHub Actions Android 15 (API 35) emulator passed both instrumentation smoke tests: main-screen navigation (including dark theme) and invalid-budget handling. The first run failed afterward while collecting screenshots from a directory removed during test cleanup; collection now uses Gradle's additional-test-output mechanism.
+
 ## Not completed
 
 - **Device / visual smoke test**: the host Android emulator segfaulted before the app could launch. Reproduced with accelerated and CPU-only modes, different graphics modes and an isolated official stable emulator. The GitHub Actions workflow now runs a separate clean Android emulator smoke test and captures screenshots; its run result must be checked before publishing. Local device-test success is not claimed. Test on a physical Android device before a production release.

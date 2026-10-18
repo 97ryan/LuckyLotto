@@ -6,6 +6,7 @@ import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.espresso.Espresso.closeSoftKeyboard
+import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import java.io.File
 import org.junit.Rule
@@ -18,7 +19,9 @@ class ScreenSmokeTest {
 
     private fun screenshot(name: String) {
         screen.waitForIdle()
-        val directory = screen.activity.getExternalFilesDir("screenshots")!!
+        val directory = File(checkNotNull(
+            InstrumentationRegistry.getArguments().getString("additionalTestOutputDir")
+        ) { "Gradle additional test output directory is required for screenshot collection" })
         directory.mkdirs()
         File(directory, "$name.png").outputStream().use {
             screen.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it)
