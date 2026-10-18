@@ -1,5 +1,7 @@
 # LuckyLotto 🍀
 
+[Source on GitHub](https://github.com/97ryan/LuckyLotto) · [Android builds](https://github.com/97ryan/LuckyLotto/actions)
+
 A free, open-source, native Android weekly planner for Ontario lottery games. Set a weekly budget and a cash-prize target; compare standard plays and legal ENCORE bundles; inspect the resulting day-by-day plan and the assumptions behind it.
 
 **Status: working 0.1.0 beta.** This is an auditable model, not an exact all-game winning-probability service. Some OLG feeds require access that is not available to an anonymous client, and several prize amounts depend on future sales or other winners. The app shows that uncertainty and excludes unquantifiable tiers. It does not claim to predict winning numbers.

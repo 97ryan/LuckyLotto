@@ -2,6 +2,8 @@
 
 ## Passed
 
+- **GitHub repository**: [97ryan/LuckyLotto](https://github.com/97ryan/LuckyLotto) created as a public repository after GitHub authorization was updated. Source and the automatic Android verification/APK build workflow are included.
+
 - Android debug APK compilation (`assembleDebug`).
 - Release compilation with R8 shrinking (`assembleRelease`); release APK is unsigned pending an owner-controlled key.
 - **25 local tests, zero failures**: exact ENCORE overlap accounting, lottery combinatorics, KENO wagers, complete MEGADICE roll enumeration, budget optimization against brute force, ENCORE host cost and maximum count, cents/zero/overflow cases, elapsed draws, Toronto DST boundaries, stale jackpots and real recorded OLG feed parsing.
@@ -13,7 +15,6 @@
 ## Not completed
 
 - **Device / visual smoke test**: the host Android emulator segfaulted before the app could launch. Reproduced with accelerated and CPU-only modes, different graphics modes and an isolated official stable emulator. No screenshot or device-test pass is claimed. Test on a physical Android device before a production release.
-- **GitHub publication**: creating `97ryan/LuckyLotto` was refused because the current GitHub credential lacks repository-creation permission (`public_repo`). The local repository and source package are complete; the remote has not been created or pushed.
 - **Complete all-game coverage**: the coverage table documents unmodeled games/strategies and prize tiers. Full all-game optimality is not claimed. No unauthorized OLG account endpoints or embedded website credentials were used.
 
 The downloadable APK is a development build for testing. It has not been submitted to Google Play, F-Droid or a public release service.
